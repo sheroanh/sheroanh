@@ -156,16 +156,42 @@ img.pic {
 </div>
 <div id="achievements" style="display: none;">
 	<div class="container">
+			<div class="head">Attainment</div>
 			<div class="row justify-content-md-center">
-				<div class="head">Attainment</div>
-				<div class="col-md-2"></div>
-				<div class="col-md-8">
-				</div>
+				<div class="col-md-1 quotes">04/2019</div>
+				<div class="col-md-9"><i class="fas fa-medal"></i> <strong>Silver Medal</strong> at The 5th HCMC April Olympic Competition 2019</div>
+			</div>
+			<div class="row justify-content-md-center">
+				<div class="col-md-1 quotes">05/2019</div>
+				<div class="col-md-9"><i class="fas fa-trophy"></i><strong> 4th</strong> at The Robotacon Vietnam 2019, Creative Senior Programming Stage</div>
+			</div>
+			<div class="row justify-content-md-center">
+				<div class="col-md-1 quotes">03/2021</div>
+				<div class="col-md-9"><i class="fas fa-trophy"></i><strong> 3rd</strong> at The HCMC Excellent Student Exam 2021</div>
+			</div>
+			<div class="row justify-content-md-center">
+				<div class="col-md-1 quotes">04/2021</div>
+				<div class="col-md-9"><i class="fas fa-trophy"></i><strong> 2nd</strong> at The HCMC Science and Engineering Fair 2021</div>
 			</div>
 	</div>
 	<div class="right"><a  onclick="next3();"><i class="fas fa-chevron-circle-right" style="font-weight: bold; font-size: 30px; float: right"></i></a></div>	
 	<div class="left"><a  onclick="previous3();"><i class="fas fa-chevron-circle-left" style="font-weight: bold; font-size: 30px; float: right"></i></a></div>
-</div>			
+</div>
+<div id="project" style="display: none;">
+	<div class="container">
+		<div class="head">Project</div>
+			
+	</div>
+	<div class="right"><a  onclick="next4();"><i class="fas fa-chevron-circle-right" style="font-weight: bold; font-size: 30px; float: right"></i></a></div>	
+	<div class="left"><a  onclick="previous4();"><i class="fas fa-chevron-circle-left" style="font-weight: bold; font-size: 30px; float: right"></i></a></div>
+</div>
+<div id="contact" style="display: none;">
+	<div class="container">
+		<div class="head">Contact</div>
+			
+	</div>
+	<div class="left"><a  onclick="previous5();"><i class="fas fa-chevron-circle-left" style="font-weight: bold; font-size: 30px; float: right"></i></a></div>
+</div>								
 <script>
 $(document).mousemove(function(event){
 	$( "h2" ).mouseover(function() {
@@ -174,20 +200,36 @@ $(document).mousemove(function(event){
 
 });
 function next1(){
-	$("#home").hide(1000);
-	$("#about").show(1000);
+	$("#home").hide(800);
+	$("#about").show(800);
 }
 function previous2(){
-	$("#about").hide(1000);
-	$("#home").show(1000);
+	$("#about").hide(800);
+	$("#home").show(800);
 }
 function next2(){
-	$("#about").hide(1000);
-	$("#achievements").show(1000);
+	$("#about").hide(800);
+	$("#achievements").show(800);
 }
 function previous3(){
-	$("#achievements").hide(1000);
-	$("#about").show(1000);
+	$("#achievements").hide(800);
+	$("#about").show(800);
+}
+function next3(){
+	$("#achievements").hide(800);
+	$("#project").show(800);
+}
+function previous4(){
+	$("#project").hide(800);
+	$("#achievements").show(800);
+}
+function next4(){
+	$("#project").hide(800);
+	$("#contact").show(800);
+}
+function previous5(){
+	$("#contact").hide(800);
+	$("#project").show(800);
 }
 
  
