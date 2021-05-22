@@ -32,8 +32,7 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" ></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.1/jquery.mobile.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.5.0-rc1/jquery.mobile-1.5.0-rc1.js" ></script>
 <!DOCTYPE html>
 <html lang="vi">
 <style>
@@ -170,11 +169,13 @@ function previous2(){
 	$("#about").hide(1000);
 	$("#home").show(1000);
 }
-$(function(){
-    // Bind the swiperightHandler callback function to the swipe event on div.box
-  $( "#home" ).on( "swipeleft", next1() );
 
-});
+$(document).ready(function() {  
+  $( "#home" )
+    .on( "swipeleft", next1())
+    .on( "swiperight", next1());
+
+});  
 </script>
 </body>
 
