@@ -153,7 +153,19 @@ img.pic {
 	</div>
 	<div class="right"><a  onclick="next2();"><i class="fas fa-chevron-circle-right" style="font-weight: bold; font-size: 30px; float: right"></i></a></div>	
 	<div class="left"><a  onclick="previous2();"><i class="fas fa-chevron-circle-left" style="font-weight: bold; font-size: 30px; float: right"></i></a></div>
-</div>		
+</div>
+<div id="achievements" style="display: none;">
+	<div class="container">
+			<div class="row justify-content-md-center">
+				<div class="head">Attainment</div>
+				<div class="col-md-2"></div>
+				<div class="col-md-8">
+				</div>
+			</div>
+	</div>
+	<div class="right"><a  onclick="next3();"><i class="fas fa-chevron-circle-right" style="font-weight: bold; font-size: 30px; float: right"></i></a></div>	
+	<div class="left"><a  onclick="previous3();"><i class="fas fa-chevron-circle-left" style="font-weight: bold; font-size: 30px; float: right"></i></a></div>
+</div>			
 <script>
 $(document).mousemove(function(event){
 	$( "h2" ).mouseover(function() {
@@ -169,7 +181,14 @@ function previous2(){
 	$("#about").hide(1000);
 	$("#home").show(1000);
 }
-
+function next2(){
+	$("#about").hide(1000);
+	$("#achievements").show(1000);
+}
+function previous2(){
+	$("#achievements").hide(1000);
+	$("#about").show(1000);
+}
 
  
 </script>
