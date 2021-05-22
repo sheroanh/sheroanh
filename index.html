@@ -41,7 +41,7 @@ body{
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-	height: 100%; 
+
 
 }
 
@@ -56,7 +56,9 @@ body{
 		background-position: 0% 50%;
 	}
 }
-.container {
+
+
+.container{
 	max-width: 80%;
     position: fixed;
     top: 50%;
@@ -123,6 +125,10 @@ a:hover,a {
   color: inherit; /* blue colors for links too */
   text-decoration: inherit; /* no underline */
 }
+.copyright{
+position: fixed;
+bottom: -10px;
+}
 </style>
 </head>
 <body>
@@ -181,36 +187,44 @@ a:hover,a {
 	<div class="right"><a  onclick="next3();"><i class="fas fa-chevron-circle-right" style="font-weight: bold; font-size: 30px; float: right"></i></a></div>	
 	<div class="left"><a  onclick="previous3();"><i class="fas fa-chevron-circle-left" style="font-weight: bold; font-size: 30px; float: right"></i></a></div>
 </div>
-<div id="project" style="display: none;">
+<div id="project1" style="display: none;">
 	<div class="container">
 		<div class="head">Project</div>
 		<div class="row justify-content-md-center mb-4">
 			<div class="col-md-1 quotes"><img class="sample" src="https://raw.githubusercontent.com/sheroanh/sheroanh.github.io/main/logo.png" /></div>
-			<div class="col-md-9"><h2><strong>AiT Studio</strong></h2>Multimedia, Infographic and Website</div>
+			<div class="col-md-9"><h3><strong>AiT Studio</strong></h3>Multimedia, Infographic and Website</div>
 		</div>
 		<div class="row justify-content-md-center mb-4">
 			<div class="col-md-1 quotes"><img class="sample" src="https://12a8.cf/wp-content/uploads/2020/10/favicon.png" /></div>
-			<div class="col-md-9"><h2><strong>Website <a href="https://12a8.cf">12a8.cf</a></strong></h2>Website for members of 12A8, Tay Thanh High School</div>
-		</div>
-		<div class="row justify-content-md-center mb-4">
-			<div class="col-md-1 quotes"><img class="sample" src="https://raw.githubusercontent.com/sheroanh/sheroanh.github.io/main/fcilogo.png" /></div>
-			<div class="col-md-9"><h2><strong>Face Chekin</strong></h2>Roll-call Student via Face Recognition (Part of eduVN System)</div>
-		</div>
-		<div class="row justify-content-md-center mb-4">
-			<div class="col-md-1 quotes"><img class="sample" src="https://raw.githubusercontent.com/sheroanh/sheroanh.github.io/main/eduvnsystem.png" /></div>
-			<div class="col-md-9"><h2><strong>eduVN System</strong></h2>Online Platform for Vietnam Education<br>Buiding...</div>
+			<div class="col-md-9"><h3><strong>Website <a href="https://12a8.cf">12a8.cf</a></strong></h3>Website for members of 12A8, Tay Thanh High School</div>
 		</div>
 	</div>
 	<div class="right"><a  onclick="next4();"><i class="fas fa-chevron-circle-right" style="font-weight: bold; font-size: 30px; float: right"></i></a></div>	
 	<div class="left"><a  onclick="previous4();"><i class="fas fa-chevron-circle-left" style="font-weight: bold; font-size: 30px; float: right"></i></a></div>
+</div>
+<div id="project2" style="display: none;">
+	<div class="container">
+		<div class="head">Project</div>
+		<div class="row justify-content-md-center mb-4">
+			<div class="col-md-1 quotes"><img class="sample" src="https://raw.githubusercontent.com/sheroanh/sheroanh.github.io/main/fcilogo.png" /></div>
+			<div class="col-md-9"><h3><strong>Face Chekin</strong></h3>Roll-call Student via Face Recognition (Part of eduVN System)</div>
+		</div>
+		<div class="row justify-content-md-center mb-4">
+			<div class="col-md-1 quotes"><img class="sample" src="https://raw.githubusercontent.com/sheroanh/sheroanh.github.io/main/eduvnsystem.png" /></div>
+			<div class="col-md-9"><h3><strong>eduVN System</strong></h3>Online Platform for Vietnam Education<br>Buiding...</div>
+		</div>
+	</div>
+	<div class="right"><a  onclick="next5();"><i class="fas fa-chevron-circle-right" style="font-weight: bold; font-size: 30px; float: right"></i></a></div>	
+	<div class="left"><a  onclick="previous5();"><i class="fas fa-chevron-circle-left" style="font-weight: bold; font-size: 30px; float: right"></i></a></div>
 </div>
 <div id="contact" style="display: none;">
 	<div class="container">
 		<div class="head">Contact</div>
 			
 	</div>
-	<div class="left"><a  onclick="previous5();"><i class="fas fa-chevron-circle-left" style="font-weight: bold; font-size: 30px; float: right"></i></a></div>
-</div>								
+	<div class="left"><a  onclick="previous6();"><i class="fas fa-chevron-circle-left" style="font-weight: bold; font-size: 30px; float: right"></i></a></div>
+</div>
+					
 <script>
 $(document).mousemove(function(event){
 	$( "h2" ).mouseover(function() {
@@ -236,22 +250,28 @@ function previous3(){
 }
 function next3(){
 	$("#achievements").hide(800);
-	$("#project").show(800);
+	$("#project1").show(800);
 }
 function previous4(){
-	$("#project").hide(800);
+	$("#project1").hide(800);
 	$("#achievements").show(800);
 }
 function next4(){
-	$("#project").hide(800);
-	$("#contact").show(800);
+	$("#project1").hide(800);
+	$("#project2").show(800);
 }
 function previous5(){
-	$("#contact").hide(800);
-	$("#project").show(800);
+	$("#project2").hide(800);
+	$("#project1").show(800);
 }
-
- 
+function previous6(){
+	$("#contact").hide(800);
+	$("#project2").show(800);
+}
+function next5(){
+	$("#project2").hide(800);
+	$("#contact").show(800);
+}
 </script>
 </body>
 
