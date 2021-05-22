@@ -153,6 +153,7 @@ img.pic {
 					<p><strong>Dream job: </strong>Software Engineer/Developer </p>
 					<div class="quotes" >“Don’t compare yourself with anyone in this world… if you do so, you are insulting yourself.”, Bill Gates
 					</div>
+					<h2><strong>S</strong><a id="name" style="display: none">uper</a><strong>Hero</strong> <strong>Anh</strong>
 				</div>
 			</div>
 	</div>
@@ -160,6 +161,12 @@ img.pic {
 	<div class="left"><a  onclick="previous2();"><i class="fas fa-chevron-circle-left" style="font-weight: bold; font-size: 50px; float: right"></i></a></div>
 </div>		
 <script>
+$(document).mousemove(function(event){
+	$( "h2" ).mouseover(function() {
+		$( "#name" ).show(100);
+	});
+
+});
 function next1(){
 	$("#home").hide(1000);
 	$("#about").show(1000);
