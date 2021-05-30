@@ -30,11 +30,13 @@
 
 	<!-- CDN-->
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" >
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
 
-<!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <style>
 body{ 
 	font-family:open sans;
@@ -149,6 +151,23 @@ a:hover,a {
 	position: fixed;
 	bottom: -10px;
 }
+
+.vid{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
 </style>
 </head>
 <body>
@@ -215,7 +234,7 @@ a:hover,a {
 			<div class="col-md-9"><h3><strong>AiT Studio</strong></h3>Multimedia, Infographic and Website</div>
 		</div>
 		<div class="row justify-content-md-center mb-4">
-			<div class="col-md-1 quotes"><img class="sample" src="https://12a8.cf/wp-content/uploads/2020/10/favicon.png" /></div>
+			<div class="col-md-1 quotes"><img class="sample" src="https://raw.githubusercontent.com/sheroanh/sheroanh.github.io/main/12a8.cf.png" /></div>
 			<div class="col-md-9"><h3><strong>Website <a href="https://12a8.cf">12a8.cf</a></strong></h3>Website for members of 12A8, Tay Thanh High School</div>
 		</div>
 	</div>
@@ -227,7 +246,9 @@ a:hover,a {
 		<div class="head">Project</div>
 		<div class="row justify-content-md-center mb-4">
 			<div class="col-md-1 quotes"><img class="sample" src="https://raw.githubusercontent.com/sheroanh/sheroanh.github.io/main/fcilogo.png" /></div>
-			<div class="col-md-9"><h3><strong>Face Chekin</strong></h3>Roll-call Student via Face Recognition (Part of eduVN System)</div>
+			<div class="col-md-9"><h3><strong>Face Chekin</strong></h3>Roll-call Student via Face Recognition (Part of eduVN System)<br><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#demo">
+			  Watch a demo video
+			</button></div>
 		</div>
 		<div class="row justify-content-md-center mb-4">
 			<div class="col-md-1 quotes"><img class="sample" src="https://raw.githubusercontent.com/sheroanh/sheroanh.github.io/main/eduvnsystem.png" /></div>
@@ -244,7 +265,27 @@ a:hover,a {
 		<p class="contact" style="font-size:20px;"><a href="mailto:sheroanh@aitstudio.cf"><i class="fas fa-at"></i> sheroanh@aitstudio.cf</a></p>	</div>
 	<div class="left"><a  onclick="previous6();"><i class="fas fa-chevron-circle-left" style="font-weight: bold; font-size: 30px; float: right"></i></a></div>
 </div>
-					
+
+<!-- Modal -->
+<div class="modal fade" id="demo" tabindex="-1" aria-labelledby="demoLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="demoLabel">FaceCheckin</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+		<div class="vid">
+			<iframe class="responsive-iframe" src="https://drive.google.com/file/d/1pne2pLHDTtcopjiNANrRrPoQb-J_-oVA/preview" ></iframe>
+		</div>
+	  </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
 <script>
 $(document).mousemove(function(event){
 	$( "h2" ).mouseover(function() {
