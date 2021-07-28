@@ -1,0 +1,15 @@
+{
+  "background_color": "purple",
+  "description": "WebShortcut",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "UIT",
+  "short_name": "UIT",
+  "start_url": "https://sheroanh.github.io/uit/index.html"
+}
