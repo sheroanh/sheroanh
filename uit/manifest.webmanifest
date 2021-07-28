@@ -1,10 +1,10 @@
 {
-  "background_color": "purple",
+  "background_color": "white",
   "description": "WebShortcut",
   "display": "fullscreen",
   "icons": [
     {
-      "src": "",
+      "src": "uit.png",
       "sizes": "192x192",
       "type": "image/png"
     }
