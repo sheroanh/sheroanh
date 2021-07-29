@@ -20,11 +20,10 @@
 		max-width: 700px;
 	}
 	.box{
-		 box-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
+		-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
 		 background-color: white;
 		 font-weight: bold;
 		 color: 2f6bff;
-		 max-width: 200px;
 		 cursor: pointer;
 		 padding: 10px;
 		 display: table-cell;
@@ -36,27 +35,27 @@
 	<div class="d-flex flex-column min-vh-100 justify-content-center align-items-center ">
 		<div class="container p-2">
 			<div class="row mb-2 justify-content-evenly">
-				<div class="col-md-4 text-center box p-1" onclick="window.location.href='https://student.uit.edu.vn/'">
-					<p>Cổng thông tin sinh viên</p>
+				<div class="col-md-4 text-center p-1" onclick="window.location.href='https://student.uit.edu.vn/'">
+					<button class="btn btn-primary box">Cổng thông tin sinh viên</button>
 				</div>
-				<div class="col-md-4 text-center box p-1" onclick="window.location.href='https://ctsv.uit.edu.vn/'">
-					<p>Công tác sinh viên</p>
-				</div>
-			</div>
-			<div class="row mb-2 justify-content-evenly">
-				<div class="col-md-4 text-center box p-1" onclick="window.location.href='https://forum.uit.edu.vn/'">
-					<p>UIT Forum</p>
-				</div>
-				<div class="col-md-4 text-center box p-1" onclick="window.location.href='https://khtc.uit.edu.vn/'">
-					<p>Kế hoạch tài chính</p>
+				<div class="col-md-4 text-center p-1" onclick="window.location.href='https://ctsv.uit.edu.vn/'">
+					<button class="btn btn-primary box">Công tác sinh viên</button>
 				</div>
 			</div>
 			<div class="row mb-2 justify-content-evenly">
-				<div class="col-md-4 text-center box p-1" onclick="window.location.href='https://oep.uit.edu.vn/'">
-					<p>OEP</p>
+				<div class="col-md-4 text-center p-1" onclick="window.location.href='https://forum.uit.edu.vn/'">
+					<button class="btn btn-primary box">UIT Forum</button>
 				</div>
-				<div class="col-md-4 text-center box p-1" onclick="window.location.href='https://courses.uit.edu.vn/'">
-					<p>Môn học</p>
+				<div class="col-md-4 text-center p-1" onclick="window.location.href='https://khtc.uit.edu.vn/'">
+					<button class="btn btn-primary box">Kế hoạch tài chính</button>
+				</div>
+			</div>
+			<div class="row mb-2 justify-content-evenly">
+				<div class="col-md-4 text-center p-1" onclick="window.location.href='https://oep.uit.edu.vn/'">
+					<button class="btn btn-primary box">OEP</button>
+				</div>
+				<div class="col-md-4 text-center p-1" onclick="window.location.href='https://courses.uit.edu.vn/'">
+					<button class="btn btn-primary box">Môn học</button>
 				</div>
 			</div>
 		</div>
