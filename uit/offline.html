@@ -11,13 +11,24 @@
 	<link rel="manifest" href="./manifest.webmanifest">
 	<style>
 	body{
-		background-color: white;
+		background-image: url('bg.jpg');
+		background-size: cover;
+		 -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 	}
 	img{
 		max-width: 125px;
 	}
 	.container{
-		max-width: 700px;
+		-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
+		background-color: #ffffffc9;
+		max-width: 600px;
+		border-radius: 15px;
 	}
 	.box{
 		-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
@@ -42,16 +53,12 @@
 <body>
 	<div id="menu">
 		<div class="d-flex flex-column min-vh-100 justify-content-center align-items-center ">
-			<div class="container p-2">
+			<div class="container pb-4">
 				<div class="row  justify-content-evenly">
 					<div class="col text-center p-1">
 						<img src="uit.png">
 						<h4>Web Shortcut</h4>
-					</div>
-				</div>
-				<div class="row  justify-content-evenly">
-					<div class="col text-center p-1">
-						<h5>Bạn hiện đang ngoại tuyến</h5>
+						<h3>Ngoại tuyến</h3>
 					</div>
 				</div>
 			</div>
