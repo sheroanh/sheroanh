@@ -1,4 +1,5 @@
 <html lang='vi'>
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="shortcut icon" href="https://tuyensinh.uit.edu.vn/favicon.ico" type="image/vnd.microsoft.icon">
@@ -8,281 +9,393 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Web Shortcut UIT</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
 	<link rel="manifest" href="./manifest.webmanifest">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<style>
-	body{
-	}
-	img.tkb{	
-		  border-collapse: collapse;
-		  border-spacing: 0;
-		  border: 1px solid #ddd;
-	}
-	img.logo{
-		max-width: 125px;
-	}
-	.container{
-		-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
-		background-color: #ffffffc9;
-		max-width: 800px;
-		border-radius: 15px;
-	}
-	.box{
-		-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
-		 font-weight: bold;
-		 color: black;
-		 cursor: pointer;
-		 padding: 0px;
-		 display: table-cell;
-		vertical-align: middle;
-	}
-	.box:hover{
-		 color: #2f6bff;
-		 cursor: pointer;
-	}
-	p{
-		padding: 2px;
-		margin: 0px;
-	}
-	.btn:focus {
-	  outline: none;
-	  box-shadow: none;
-	}
-	
-	/* width */
-	::-webkit-scrollbar {
-	  width: 8px;
-	  height: 8px;
-	}
+		.accordion-item,
+		.accordion-header,
+		.accordion-button,
+		.accordion-body {
+			background-color: #555;
+			color: white;
+		}
 
-	/* Track */
-	::-webkit-scrollbar-track {
-	  background: #f1f1f1; 
-	}
-	 
-	/* Handle */
-	::-webkit-scrollbar-thumb {
-	  background: #888; 
-	}
+		body {
+			background-color: #888;
+			color: white;
+		}
 
-	/* Handle on hover */
-	::-webkit-scrollbar-thumb:hover {
-	  background: #555; 
-	}
+		.accordion-button:not(.collapsed) {
+			background-color: #555;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+		}
+
+		.accordion-button:after {
+			color: black;
+		}
+
+		.text-center {
+			color: white;
+		}
+
+		.form-control {
+			color: rgb(255, 255, 255);
+			background-color: #fff0;
+		}
+
+		.form-control:focus {
+			color: rgb(255, 255, 255);
+			background-color: #fff0;
+		}
+
+		::-webkit-input-placeholder {
+			/* WebKit, Blink, Edge */
+			color: white;
+		}
+
+		:-moz-placeholder {
+			/* Mozilla Firefox 4 to 18 */
+			color: white;
+			opacity: 1;
+		}
+
+		::-moz-placeholder {
+			/* Mozilla Firefox 19+ */
+			color: white;
+			opacity: 1;
+		}
+
+		:-ms-input-placeholder {
+			/* Internet Explorer 10-11 */
+			color: white;
+		}
+
+		::-ms-input-placeholder {
+			/* Microsoft Edge */
+			color: white;
+		}
+
+		::placeholder {
+			/* Most modern browsers support this now. */
+			color: white;
+		}
+
+		img.tkb {
+			border-collapse: collapse;
+			border-spacing: 0;
+			border: 1px solid #ddd;
+		}
+
+		img.logo {
+			max-width: 125px;
+		}
+
+		.container {
+			-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
+			max-width: 800px;
+			border-radius: 15px;
+			color: white;
+		}
+
+		.box {
+			-shadow: 0 3px 15px rgb(0 0 0 / 0.2);
+			font-weight: bold;
+			color: white;
+			cursor: pointer;
+			padding: 0px;
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.box:hover {
+			color: #2f6bff;
+			cursor: pointer;
+		}
+
+		p {
+			padding: 2px;
+			margin: 0px;
+		}
+
+		.btn:focus {
+			outline: none;
+			box-shadow: none;
+		}
+
+		/* width */
+		::-webkit-scrollbar {
+			width: 8px;
+			height: 8px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+			background: #f1f1f1;
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: #888;
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+			background: #555;
+		}
 	</style>
 	<script>
-	if ('serviceWorker' in navigator) {
-	  navigator.serviceWorker.register('service-worker.js');
-	}
-	function getCookie(cname) {
-		  let name = cname + "=";
-		  let decodedCookie = decodeURIComponent(document.cookie);
-		  let ca = decodedCookie.split(';');
-		  for(let i = 0; i < ca.length; i++) {
-			let c = ca[i];
-			while (c.charAt(0) == ' ') {
-			  c = c.substring(1);
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('service-worker.js');
+		}
+		function getCookie(cname) {
+			let name = cname + "=";
+			let decodedCookie = decodeURIComponent(document.cookie);
+			let ca = decodedCookie.split(';');
+			for (let i = 0; i < ca.length; i++) {
+				let c = ca[i];
+				while (c.charAt(0) == ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) == 0) {
+					return c.substring(name.length, c.length);
+				}
 			}
-			if (c.indexOf(name) == 0) {
-			  return c.substring(name.length, c.length);
-			}
-		  }
-		  return "";
-	}
-	function load_tkb(){
-		var uid = $('#uid').val();
-                $.ajax({
-                    url : "https://anhit.name.vn/uit-schedule/tkb.php",
-                    type : "get",
-                    dataType:"text",
-                    data : {
-                         uid : uid,
-                    },
-                    success : function (result){
-                        $('#tkb').html(result);
-                    }
-                });
-            }
-	function save_id(){
-		var uid = $('#uid').val();
-		document.cookie = "uid="+uid+"; expires=Thu, 18 Dec 2999 12:00:00 UTC";
-		load_tkb();
-	}
-	$(document).ready(function() {
-		$('#uid').val(getCookie("uid"));
-		load_tkb();
-		var field = document.querySelector('[id="uid"]');
-		field.addEventListener('keypress', function ( event ) {  
-		   var key = event.keyCode;
-			if (key === 32) {
-			  event.preventDefault();
-			}
+			return "";
+		}
+		function load_tkb() {
+			var uid = $('#uid').val();
+			$.ajax({
+				url: "https://anhit.name.vn/uit-schedule/tkb.php",
+				type: "get",
+				dataType: "text",
+				data: {
+					uid: uid,
+				},
+				success: function (result) {
+					$('#tkb').html(result);
+				}
+			});
+		}
+		function save_id() {
+			var uid = $('#uid').val();
+			document.cookie = "uid=" + uid + "; expires=Thu, 18 Dec 2999 12:00:00 UTC";
+			load_tkb();
+		}
+		$(document).ready(function () {
+			$('#uid').val(getCookie("uid"));
+			load_tkb();
+			var field = document.querySelector('[id="uid"]');
+			field.addEventListener('keypress', function (event) {
+				var key = event.keyCode;
+				if (key === 32) {
+					event.preventDefault();
+				}
+			});
 		});
-	} );
 	</script>
 </head>
+
 <body>
 	<div id="menu">
 		<div class="d-flex flex-column min-vh-100 justify-content-center align-items-center ">
 			<div class="container pb-4">
 				<div class="row  justify-content-evenly">
-					<div class="col text-center p-1 mb-1">
+					<div class="col text-center p-1 mb-3">
 						<img class="logo" src="uit.png">
 						<h4>Web Shortcut</h4>
 					</div>
 				</div>
 				<div class="accordion" id="accordionPanelsStayOpenExample">
-				  <div class="accordion-item">
-					<h2 class="accordion-header" id="panelsStayOpen-headingZero">
-					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseZero" aria-expanded="false" aria-controls="panelsStayOpen-collapseZero">
-						Thời gian biểu
-					  </button>
-					</h2>
-					<div id="panelsStayOpen-collapseZero" class="accordion-collapse collapse " aria-labelledby="panelsStayOpen-headingZero">
-					  <div class="accordion-body">
-						<p>
-						<strong>Đối với thí sinh tham dự kỳ thi tốt nghiệp THPT đợt 1 năm 2021 hoặc đã tốt nghiệp THPT từ năm 2020 trở về trước:</strong>
-						<br>- Xác nhận nhập học: từ ngày 01/8/2021 đến trước 17h00 ngày 22/8/2021.
-						<br>- Nộp học phí, tạo hồ sơ sinh viên trực tuyến: từ ngày 01/8/2021 đến ngày 22/8/2021.
-						<br>- Nộp hồ sơ sinh viên: từ ngày 04/10/2021 đến ngày 15/10/2021.
-						<br><strong>Đối với thí sinh tham dự kỳ thi tốt nghiệp THPT đợt 2 năm 2021 hoặc được đặc cách xét tốt nghiệp THPT năm 2021:</strong>
-						<br>- Xác nhận nhập học: từ ngày 25/8/2021 đến trước 17h00 ngày 03/9/2021.
-						<br>- Nộp học phí, tạo hồ sơ sinh viên trực tuyến: từ ngày 25/8/2021 đến ngày 03/9/2021.
-						<br>- Nộp hồ sơ sinh viên: từ ngày 04/10/2021 đến ngày 15/10/2021.
-						</p>
-						<div id="tkb"></div>
-					  </div>
-					</div>
-				  </div>
-				  <div class="accordion-item">
-					<h2 class="accordion-header" id="panelsStayOpen-headingOne">
-					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
-						Tân sinh viên
-					  </button>
-					</h2>
-					<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse " aria-labelledby="panelsStayOpen-headingOne">
-					  <div class="accordion-body">
-						<div class=" text-center p-1" onclick="window.location.href='https://tuyensinh.uit.edu.vn/tuyensinh/giaybao-nhaphoc'">
-							<button class="btn  box">Giấy báo nhập học</button>
-						</div>
-						<div class=" text-center p-1" onclick="window.location.href='https://student.uit.edu.vn/nhaphoc'">
-							<button class="btn  box">Hồ sơ nhập học</button>
-						</div>
-					  </div>
-					</div>
-				  </div>
-				  <div class="accordion-item">
-					<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-						Cổng thông tin
-					  </button>
-					</h2>
-					<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-					  <div class="accordion-body">
-						<div class="text-center p-1" onclick="window.location.href='https://student.uit.edu.vn/'">
-							<button class="btn  box">Cổng thông tin sinh viên - DAA</button>
-						</div>
-						<div class="text-center p-1" onclick="window.location.href='https://ctsv.uit.edu.vn/'">
-							<button class="btn  box">Công tác sinh viên</button>
-						</div>
-						<div class="text-center p-1" onclick="window.location.href='https://forum.uit.edu.vn/'">
-							<button class="btn  box">UIT Forum</button>
-						</div>
-		
-						<div class=" text-center p-1" onclick="window.location.href='https://gmail.com/'">
-							<button class="btn  box">Webmail (Gmail)</button>
-						</div>
-						<div class=" text-center p-1" onclick="window.location.href='https://www.facebook.com/groups/223963755558701/'">
-							<button class="btn  box">Group Facebook K16</button>
-						</div>
-					  </div>
-					</div>
-				  </div>
-				  <div class="accordion-item">
-					<h2 class="accordion-header" id="panelsStayOpen-headingThree">
-					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-						Môn học & Học phần
-					  </button>
-					</h2>
-					<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-					  <div class="accordion-body">
-						<div class="text-center p-1" onclick="window.location.href='https://courses.uit.edu.vn/'">
-							<button class="btn  box">Môn học</button>
-						</div>
-						<div class="text-center p-1" onclick="window.location.href='https://dkhp.uit.edu.vn/'">
-							<button class="btn  box">Đăng kí học phần</button>
-						</div>
-					  </div>
-					</div>
-				  </div>
-				  <div class="accordion-item">
-					<h2 class="accordion-header" id="panelsStayOpen-headingFour">
-					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
-						Khoa HTTT & Phòng ban
-					  </button>
-					</h2>
-					<div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
-					  <div class="accordion-body">
-						<div class="text-center p-1" onclick="window.location.href='https://httt.uit.edu.vn/'">
-							<button class="btn  box">Website khoa HTTT</button>
-						</div>
-						<div class="text-center p-1" onclick="window.location.href='https://khtc.uit.edu.vn/'">
-							<button class="btn  box">Phòng Kế hoạch tài chính</button>
-						</div>
-						<div class="text-center p-1" onclick="window.location.href='https://oep.uit.edu.vn/'">
-							<button class="btn  box">Phòng OEP</button>
-						</div>
-						<div class="text-center p-1" onclick="window.location.href='https://phongdl.uit.edu.vn/'">
-							<button class="btn  box">Phòng dữ liệu & CNTT</button>
-						</div>
-					  </div>
-					</div>
-				  </div>
-				  <div class="accordion-item">
-					<h2 class="accordion-header" id="panelsStayOpen-headingFive">
-					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
-						Quản lý Sinh viên & Tài khoản
-					  </button>
-					</h2>
-					<div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
-					  <div class="accordion-body">
-						<div class="text-center p-1" onclick="window.location.href='https://chungthuc.uit.edu.vn'">
-							<button class="btn  box">Tài khoản chứng thực</button>
-						</div>
-						<div class="text-center p-1" onclick="window.location.href='https://drl.uit.edu.vn'">
-							<button class="btn  box">Quản lý sinh viên</button>
-						</div>
-					  </div>
-					</div>
-				  </div>
-				  <div class="accordion-item">
-					<h2 class="accordion-header" id="panelsStayOpen-headingSix">
-					  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
-						Công cụ
-					  </button>
-					</h2>
-					<div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSix">
-					  <div class="accordion-body">
-						<div class="text-center p-1" onclick="window.location.href='https://khiemledev.github.io/uit-schedule/'">
-							<button class="btn  box">Quản lý Thời khoá biểu (</button>
-						</div>
-						<div class="row p-2">
-							<label class="p-1 m-0">Nhập UID để hiển thị TKB ở "Thời gian biểu": </label>
-							<input type="text" class="pl-0 mb-1 form-control form-control-sm" id="uid" style="width: 100%;" placeholder="Tối đa 15 kí tự (chữ, số, kí tự đặc biệt)" maxlength="15" onkeypress="save_id()" oninput="save_id()" autocomplete="off">
-							<div class="alert alert-warning" role="alert">
-								Truy cập <a href="https://anhit.name.vn/uit-schedule/" style="text-decoration:none">anhit.name.vn/uit-schedule/</a> để biết thêm về chức năng TKB.
-								<br>Chúng tôi từ chối trách nhiệm nếu UID bị trùng/thông tin cá nhân bị lộ.
-								<br>Cung cấp bởi AiT Studio
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-headingZero">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#panelsStayOpen-collapseZero" aria-expanded="false"
+								aria-controls="panelsStayOpen-collapseZero">
+								Thời gian biểu
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseZero" class="accordion-collapse collapse "
+							aria-labelledby="panelsStayOpen-headingZero">
+							<div class="accordion-body">
+								<p>
+									<strong>Đối với thí sinh tham dự kỳ thi tốt nghiệp THPT đợt 1 năm 2021 hoặc đã tốt
+										nghiệp THPT từ năm 2020 trở về trước:</strong>
+									<br>- Xác nhận nhập học: từ ngày 01/8/2021 đến trước 17h00 ngày 22/8/2021.
+									<br>- Nộp học phí, tạo hồ sơ sinh viên trực tuyến: từ ngày 01/8/2021 đến ngày
+									22/8/2021.
+									<br>- Nộp hồ sơ sinh viên: từ ngày 04/10/2021 đến ngày 15/10/2021.
+									<br><strong>Đối với thí sinh tham dự kỳ thi tốt nghiệp THPT đợt 2 năm 2021 hoặc được
+										đặc cách xét tốt nghiệp THPT năm 2021:</strong>
+									<br>- Xác nhận nhập học: từ ngày 25/8/2021 đến trước 17h00 ngày 03/9/2021.
+									<br>- Nộp học phí, tạo hồ sơ sinh viên trực tuyến: từ ngày 25/8/2021 đến ngày
+									03/9/2021.
+									<br>- Nộp hồ sơ sinh viên: từ ngày 04/10/2021 đến ngày 15/10/2021.
+								</p>
+								<div id="tkb"></div>
 							</div>
 						</div>
-					  </div>
 					</div>
-				  </div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-headingOne">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+								aria-controls="panelsStayOpen-collapseOne">
+								Tân sinh viên
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse "
+							aria-labelledby="panelsStayOpen-headingOne">
+							<div class="accordion-body">
+								<div class=" text-center p-1"
+									onclick="window.location.href='https://tuyensinh.uit.edu.vn/tuyensinh/giaybao-nhaphoc'">
+									<button class="btn  box">Giấy báo nhập học</button>
+								</div>
+								<div class=" text-center p-1"
+									onclick="window.location.href='https://student.uit.edu.vn/nhaphoc'">
+									<button class="btn  box">Hồ sơ nhập học</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+								aria-controls="panelsStayOpen-collapseTwo">
+								Cổng thông tin
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+							aria-labelledby="panelsStayOpen-headingTwo">
+							<div class="accordion-body">
+								<div class="text-center p-1"
+									onclick="window.location.href='https://student.uit.edu.vn/'">
+									<button class="btn  box">Cổng thông tin sinh viên - DAA</button>
+								</div>
+								<div class="text-center p-1" onclick="window.location.href='https://ctsv.uit.edu.vn/'">
+									<button class="btn  box">Công tác sinh viên</button>
+								</div>
+								<div class="text-center p-1" onclick="window.location.href='https://forum.uit.edu.vn/'">
+									<button class="btn  box">UIT Forum</button>
+								</div>
+
+								<div class=" text-center p-1" onclick="window.location.href='https://gmail.com/'">
+									<button class="btn  box">Webmail (Gmail)</button>
+								</div>
+								<div class=" text-center p-1"
+									onclick="window.location.href='https://www.facebook.com/groups/223963755558701/'">
+									<button class="btn  box">Group Facebook K16</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-headingThree">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+								aria-controls="panelsStayOpen-collapseThree">
+								Môn học & Học phần
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+							aria-labelledby="panelsStayOpen-headingThree">
+							<div class="accordion-body">
+								<div class="text-center p-1"
+									onclick="window.location.href='https://courses.uit.edu.vn/'">
+									<button class="btn  box">Môn học</button>
+								</div>
+								<div class="text-center p-1" onclick="window.location.href='https://dkhp.uit.edu.vn/'">
+									<button class="btn  box">Đăng kí học phần</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-headingFour">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+								aria-controls="panelsStayOpen-collapseFour">
+								Khoa HTTT & Phòng ban
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+							aria-labelledby="panelsStayOpen-headingFour">
+							<div class="accordion-body">
+								<div class="text-center p-1" onclick="window.location.href='https://httt.uit.edu.vn/'">
+									<button class="btn  box">Website khoa HTTT</button>
+								</div>
+								<div class="text-center p-1" onclick="window.location.href='https://khtc.uit.edu.vn/'">
+									<button class="btn  box">Phòng Kế hoạch tài chính</button>
+								</div>
+								<div class="text-center p-1" onclick="window.location.href='https://oep.uit.edu.vn/'">
+									<button class="btn  box">Phòng OEP</button>
+								</div>
+								<div class="text-center p-1"
+									onclick="window.location.href='https://phongdl.uit.edu.vn/'">
+									<button class="btn  box">Phòng dữ liệu & CNTT</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-headingFive">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+								aria-controls="panelsStayOpen-collapseFive">
+								Quản lý Sinh viên & Tài khoản
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+							aria-labelledby="panelsStayOpen-headingFive">
+							<div class="accordion-body">
+								<div class="text-center p-1"
+									onclick="window.location.href='https://chungthuc.uit.edu.vn'">
+									<button class="btn  box">Tài khoản chứng thực</button>
+								</div>
+								<div class="text-center p-1" onclick="window.location.href='https://drl.uit.edu.vn'">
+									<button class="btn  box">Quản lý sinh viên</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="panelsStayOpen-headingSix">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+								data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+								aria-controls="panelsStayOpen-collapseSix">
+								Công cụ
+							</button>
+						</h2>
+						<div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
+							aria-labelledby="panelsStayOpen-headingSix">
+							<div class="accordion-body">
+								<div class="text-center p-1"
+									onclick="window.location.href='https://khiemledev.github.io/uit-schedule/'">
+									<button class="btn  box">Quản lý Thời khoá biểu</button>
+								</div>
+								<div class="row p-2">
+									<label class="p-1 m-0">Nhập UID để hiển thị TKB ở "Thời gian biểu": </label>
+									<input type="text" class="pl-0 mb-1 form-control form-control-sm" id="uid"
+										style="width: 100%;" placeholder="Tối đa 15 kí tự (chữ, số, kí tự đặc biệt)"
+										maxlength="15" onkeypress="save_id()" oninput="save_id()" autocomplete="off">
+									<div class="alert alert-warning" role="alert">
+										Truy cập <a href="https://anhit.name.vn/uit-schedule/"
+											style="text-decoration:none">anhit.name.vn/uit-schedule/</a> để biết thêm về
+										chức năng TKB.
+										<br>Chúng tôi từ chối trách nhiệm nếu UID bị trùng/thông tin cá nhân bị lộ.
+										<br>Cung cấp bởi AiT Studio
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </body>
+
 </html>
