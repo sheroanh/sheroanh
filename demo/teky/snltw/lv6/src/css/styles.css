@@ -1,3 +1,4 @@
+/* config */
 :root {
     --primary-color: #06072b;
     --secondary-color: #ffffff;
@@ -5,42 +6,18 @@
     --white: #ffffff;
 }
 
-::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: var(--primary-color);
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: var(--primary-color);
 }
 
-::-webkit-scrollbar
-{
-	width: 6px;
-	background-color: var(--primary-color);
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: var(--primary-color);
 }
 
-::-webkit-scrollbar-thumb
-{
-	background-color: var(--secondary-color);
-}
-
-.header>.menu::-webkit-scrollbar-track
-{
-	display: none;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;
-}
-
-.header>.menu::-webkit-scrollbar
-{
-	display: none;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;
-}
-
-.header>.menu::-webkit-scrollbar-thumb
-{
-	display: none;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;
+::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
 }
 
 * {
@@ -52,6 +29,47 @@ a {
     text-decoration: none;
 }
 
+div {
+    scroll-margin-block-start: 80px;
+    scroll-margin-block-end: 80px;
+}
+/* layout */
+.flex {
+    display: flex;
+    align-items: center;
+    max-width: 90%;
+}
+
+.container {
+    padding: 50px 30px;
+}
+
+.card {
+    display: block;
+    padding: 10px 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.group {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.content {
+    width: 100%;
+    padding: 20px 30px;
+}
+
+.body {
+    display: block;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+}
+
+/* header */
 .sticky {
     position: fixed;
     top: 0;
@@ -95,21 +113,22 @@ a {
     padding: 0px 20px;
 }
 
-.flex {
-    display: flex;
-    align-items: center;
-    max-width: 90%;
+.header>.menu::-webkit-scrollbar-track {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-.container {
-    padding: 50px 30px;
+.header>.menu::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-.body {
-    display: block;
-    position: absolute;
-    top: 100px;
-    width: 100%;
+.header>.menu::-webkit-scrollbar-thumb {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .menu>a {
@@ -119,6 +138,7 @@ a {
     margin-right: 30px;
 }
 
+/* background */
 .bg-primary {
     background-color: var(--secondary-color);
     color: var(--primary-color);
@@ -129,6 +149,7 @@ a {
     color: var(--secondary-color);
 }
 
+/* text */
 .text-primary {
     background-color: var(--secondary-color);
     color: var(--primary-color);
@@ -181,10 +202,7 @@ span.text-secondary {
     padding: 0px 3px;
 }
 
-.about {
-    margin-top: 20px;
-}
-
+/* image */
 img.profile {
     object-fit: cover;
     width: 150px;
@@ -217,22 +235,4 @@ img.icon {
     object-fit: cover;
     width: 24px;
     margin-right: 5px;
-}
-
-.card {
-    display: block;
-    padding: 10px 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.group {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.content {
-    width: 100%;
-    padding: 20px 30px;
 }
